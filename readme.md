@@ -7,6 +7,7 @@
 * [Githubアカウント取得](github/create_account.md)
 * [Gitのインストール](github/localgit.md)
 * [forkの手順](github/fork.md)
+* [ローカルへクローン](github/cloneintolocal.md)
 
 ## 開発環境構築
 
