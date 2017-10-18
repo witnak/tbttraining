@@ -8,7 +8,7 @@
 
 ## 開発環境構築
 
-* VirtualBoxをインストールする
+* [VirtualBoxをインストールする](steps/virtualbox_install.md)
 * CentOS7を仮想環境に構築する
 * CentOS7にrbenvをインストールする
 * CentOS7にRedmineをインストールする
