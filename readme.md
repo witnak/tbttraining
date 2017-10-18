@@ -5,6 +5,8 @@
 ## 事前準備
 
 * [Githubアカウント取得](github/create_account.md)
+* [Gitのインストール](github/localgit.md)
+
 
 ## 開発環境構築
 
