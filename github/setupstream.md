@@ -24,10 +24,12 @@
    remotes/upsteram/master
 ```
 確認すると**remotes/upstream/master**が加わっている。
+
 ※環境によって、```git fetch upstream``` の操作を行ってからでないと出てこない場合がある。
 
-4.フォーク元リポジトリの変更を取り出すために **fetch** と **merge** を使用します
-**fetch**　フォーク元リポジトリの情報を元にorigin/masterを更新
+4.フォーク元リポジトリの変更を取り出すために **fetch** と **merge** を使用する。
+
+**fetch**　フォーク元リポジトリの情報を元にorigin/masterを更新。
 ```
  $git fetch upstream
 ```
