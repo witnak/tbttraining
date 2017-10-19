@@ -29,12 +29,12 @@
 
 4.フォーク元リポジトリの変更を取り出すために **fetch** と **merge** を使用する。
 
-**fetch**　フォーク元リポジトリの情報を元にorigin/masterを更新。
+**fetch**　フォーク元リポジトリの情報を元にorigin/master（ローカルのリポジトリ）を更新。
 ```
  $git fetch upstream
 ```
 
-**merge**　origin/master　の更新情報を　master にマージ
+**merge**　origin/master　の更新情報を　master（ローカルの作業ディレクトリ） にマージ
 ```
  $git merge upstream/master
 ```
