@@ -14,8 +14,8 @@
 
 * [VirtualBoxをインストールする](steps/virtualbox_install.md)
 * [CentOS7を仮想環境に構築する](steps/cenos7.md)
-* CentOS7にrbenvをインストールする
-* CentOS7にRedmineをインストールする
+* [CentOS7にrbenvをインストールする](steps/rbenv.md)
+* [CentOS7にRedmineをインストールする](steps/redmine.md)
 * CentOS7にPostgresqlをインストールする
 * CentOS7にnginxをインストールする
 * CentOS7にunicornをインストールしてRedmineと連携させる
