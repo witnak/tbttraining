@@ -16,6 +16,7 @@
 * [CentOS7を仮想環境に構築する](steps/cenos7.md)
 * [CentOS7にrbenvをインストールする](steps/rbenv.md)
 * [CentOS7にRedmineをインストールする](steps/redmine.md)
-* CentOS7にPostgresqlをインストールする
-* CentOS7にnginxをインストールする
+* CentOS7にMariaDBをインストールする
+* RedmineのデータベースをPostgresqlからMariaDBへ切り替える
+* CentOS7にnginxをインストールしてapacheと切り替える
 * CentOS7にunicornをインストールしてRedmineと連携させる
