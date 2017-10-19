@@ -2,7 +2,7 @@
 
 前提として、リポジトリのフォークとローカルへのクローンが完了していること。
 
-1.まずブランチの確認を行う。
+1. まずブランチの確認を行う。
 ```
  $git branch -a
  *master
@@ -10,14 +10,14 @@
   remotes/origin/master
 ```
 
-2.リモートリポジトリとして、オリジナルのリポジトリを**upstream**という名前で設定。
+2. リモートリポジトリとして、オリジナルのリポジトリを**upstream**という名前で設定。
 ```
  $git remote add upstream [フォーク元のURL].git
 ```
 　このリポジトリは**upstream**という名前で本家リポジトリを参照する。　※一度設定すれば再設定の必要は無し。
 
 
-3.もう一度ブランチの確認。
+3. もう一度ブランチの確認。
 ```
  $git branch -a
   *master
@@ -30,14 +30,22 @@
 　※環境によって、```git fetch upstream``` の操作を行ってからでないと出てこない場合がある。
 
 
-4.フォーク元リポジトリの変更を取り出すために **fetch** と **merge** を使用する。
+4. フォーク元リポジトリの変更を取り出すために **fetch** と **merge** を使用する。
 
 　**fetch**　フォーク元リポジトリの情報を元にorigin/master（ローカルのリポジトリ）を更新。
 ```
  $git fetch upstream
+ remote: Counting objects: 1, done.
+ remote: Total 1 (delta 0), reused 1 (delta 0)
+ Unpacking objects: 100% (1/1), done.
+ From [フォーク元のURL]
+  4d531a2..0d7c835  master     -> upstream/master
 ```
 
 　**merge**　origin/master　の更新情報を　master（ローカルの作業ディレクトリ） にマージ
 ```
  $git merge upstream/master
+ readme.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 ```
+　変更がない場合は"Already up-to-date."と表示される。
