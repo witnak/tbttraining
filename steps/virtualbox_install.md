@@ -5,7 +5,7 @@
 2.Download VirtualBox 5.2をクリック
 
 3.赤枠で囲まれいる　Windows hosts　をクリック
-![install](image/virtualbox2.jpg)
+![install vb](image/virtualbox2.jpg)
 
 4.exeファイルがダウンロードされるのでクリック
 
