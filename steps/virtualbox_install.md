@@ -1,22 +1,34 @@
-﻿# VirtualBoxのインストール方法について
+# VirtualBoxをインストールする
 
-1.公式Webページにアクセス　https://www.virtualbox.org/
-
-2.Download VirtualBox 5.2をクリック
-
-3.赤枠で囲まれいる　Windows hosts　をクリック
-![vb](../github/image/virtualbox2.jpg)
-
-4.exeファイルがダウンロードされるのでクリック
-
-5.セットアップ画面が表示される。Next　をクリック
-
-6.特に変更しなくて良いので　Next　をクリック
-
-7.ショートカットの置く場所を選択できるが、今回は変更なしで　Next　をクリック
-
-8.Warningとでるが問題ないので　Yes　をクリック
-
-9.インストールの最終確認画面。　install　をクリック
-
-10.インストール終了後　Finish　をクリック。VirtualBoxが起動する。
+1. VirtualBoxダウンロードサイトへアクセスする。https://www.virtualbox.org/  
+![web](image/virtualbox_web.jpg)  
+2．VirtualBox 5.1.30 platform packagesにある該当OSをクリック。（インストーラがダウンロードされる）　　
+今回はWindowsを選択する。  
+![select](image/virtualbox_web.jpg)  
+3．ダウンロードされたインストーラを実行すると次のように表示されるので、「next」を選択する。  
+<div align=center>
+  <img src=image/virtualbox_installer_begin.jpg>
+</div>
+5．VirtualBoxをインストールする場所の指定ができる。  
+今回は特に変更する必要がないので「next」を選択。
+<div align=center>
+  <img src=image/virtualbox_installer_dir.jpg>
+</div>  
+6．インストール後のショートカットやアイコンの設定。  
+こちらも同じく変更する必要がないので「next」を選択。  
+<div align=center>
+  <img src=image/virtualbox_installer_icon.jpg>
+</div>  
+7．一時的にネットワークが切断されるという警告がでるがそのままYesを選択。    
+(インストール後復帰するので、心配しなくても良い。)
+<div align=center>
+  <img src=image/virtualbox_installer_warn.jpg>
+</div>  
+8．インストールの最終確認画面が表示されるので「install」を選択。  
+<div align=center>
+  <img src=image/virtualbox_installer_lastcheck.jpg>
+</div>  
+9．インストール完了後「Finish」をクリックするとインストーラが終了し、VirtualBoxが起動する。  
+<div align=center>
+  <img src=image/virtualbox_installer_finish.jpg>
+</div>  
