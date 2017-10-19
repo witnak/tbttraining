@@ -11,14 +11,24 @@
 </div>
 5．VirtualBoxをインストールする場所の指定ができる。
 今回は特に変更する必要がないので「next」を選択。
-　　　　　　　　　　![dirselect](image/virtualbox_installer_dir.jpg)  
+<div align=center> 
+  <img src=image/virtualbox_installer_dir.jpg>
+</div>  
 6．インストール後のショートカットやアイコンの設定。
 こちらも同じく変更する必要がないので「next」を選択。
-　　　　　　　　　　![iconset](image/virtualbox_installer_icon.jpg)  
+<div align=center> 
+  <img src=image/virtualbox_installer_icon.jpg>
+</div>  
 7．一時的にネットワークが切断されるという警告がでるがそのままYesを選択。  
 (インストール後復帰するので、心配しなくても良い。)
-　　　　　　　　　　![warn](image/virtualbox_installer_warn.jpg)  
+<div align=center> 
+  <img src=image/virtualbox_installer_warn.jpg>
+</div>  
 8．インストールの最終確認画面が表示されるので「install」を選択。
-　　　　　　　　　　![last](image/virtualbox_installer_lastcheck.jpg)  
-9．インストール完了後「Finish」をクリックするとインストールされたVirtualBoxが起動する。
-　　　　　　　　　　![finish](image/virtualbox_installer_finish.jpg)
+<div align=center> 
+  <img src=image/virtualbox_installer_lastcheck.jpg>
+</div>  
+9．インストール完了後「Finish」をクリックするとインストーラが終了し、VirtualBoxが起動する。
+<div align=center> 
+  <img src=image/virtualbox_installer_finish.jpg>
+</div>  
