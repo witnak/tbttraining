@@ -1,1 +1,1 @@
-# CentOS7‚ð‰¼‘zŠÂ‹«‚É\’z‚·‚é
+# CentOS7ã‚’ä»®æƒ³ç’°å¢ƒã«æ§‹ç¯‰ã™ã‚‹
