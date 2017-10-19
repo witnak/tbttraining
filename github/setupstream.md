@@ -16,14 +16,14 @@ $ git branch -a
 
 ```
 
-1. リモートリポジトリとして、 upstream という名前で設定します。
+2. リモートリポジトリとして、 upstream という名前で設定します。
 ```
 
 $ git remote add upstream https://github.com/witnak/tbttraining.git
 
 ```
 
-1. 再度`git branch -a` を実行しbranchの状態を確認します。
+3. 再度`git branch -a` を実行しbranchの状態を確認します。
 ```
 $ git branch -a
 * master
@@ -34,7 +34,7 @@ $ git branch -a
 ```
 `remotes/upstream/master`という行が追加されているのがわかります。
 
-1. おおもとのリポジトリからローカルリポジトリに変更を適用するため、fetchとmergeを行います。
+4. おおもとのリポジトリからローカルリポジトリに変更を適用するため、fetchとmergeを行います。
 まずはfetchから
 ```
 $ git fetch upstream
