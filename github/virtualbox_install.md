@@ -1,6 +1,6 @@
 # VirtualBoxをインストールする
 
-1．VirtualBoxダウンロードサイトへアクセスする。https://www.virtualbox.org/
+1. VirtualBoxダウンロードサイトへアクセスする。https://www.virtualbox.org/
 ![web](image/virtualbox_web.jpg)　　
 2．VirtualBox 5.1.30 platform packagesにある該当OSをクリック。（インストーラがダウンロードされる）　　
 今回はWindowsを選択する。
