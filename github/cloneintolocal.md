@@ -43,3 +43,7 @@ C:\ws\practice>dir
 
 C:\ws\practice>
 ```
+0. 以降は、クローンしてきたフォルダに移って、作業をする。  
+
+gitコマンドは検索して調べるか、以下を参考にする。  
+* [Gitの基本的なコマンドメモ(abe-naoki)](https://github.com/abe-naoki/ruby_practice/blob/master/doc/git_memo.md)
