@@ -1,4 +1,4 @@
-#　VirtualBoxをインストールする
+# VirtualBoxをインストールする
 
 1．VirtualBoxダウンロードサイトへアクセスする。https://www.virtualbox.org/
 ![web](image/virtualbox_web.jpg)　　
