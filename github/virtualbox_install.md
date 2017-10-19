@@ -5,9 +5,7 @@
 2．VirtualBox 5.1.30 platform packagesにある該当OSをクリック。（インストーラがダウンロードされる）　　
 今回はWindowsを選択する。
 ![select](image/virtualbox_web.jpg)  
-3．ダウンロードされたインストーラを実行する。  
-
-4．次のように表示されるので、「next」を選択する。
+3．ダウンロードされたインストーラを実行すると次のように表示されるので、「next」を選択する。  
 ![begin](image/virtualbox_installer_begin.jpg)  
 5．VirtualBoxをインストールする場所の指定ができる。
 今回は特に変更する必要がないので「next」を選択。
