@@ -1,34 +1,34 @@
-# VirtualBox‚ðƒCƒ“ƒXƒg[ƒ‹‚·‚é
+# VirtualBoxã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹
 
-1. VirtualBoxƒ_ƒEƒ“ƒ[ƒhƒTƒCƒg‚ÖƒAƒNƒZƒX‚·‚éBhttps://www.virtualbox.org/
+1. VirtualBoxãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã‚µã‚¤ãƒˆã¸ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹ã€‚https://www.virtualbox.org/
 ![web](image/virtualbox_web.jpg)  
-2DVirtualBox 5.1.30 platform packages‚É‚ ‚éŠY“–OS‚ðƒNƒŠƒbƒNBiƒCƒ“ƒXƒg[ƒ‰‚ªƒ_ƒEƒ“ƒ[ƒh‚³‚ê‚éj@@
-¡‰ñ‚ÍWindows‚ð‘I‘ð‚·‚éB
+2ï¼ŽVirtualBox 5.1.30 platform packagesã«ã‚ã‚‹è©²å½“OSã‚’ã‚¯ãƒªãƒƒã‚¯ã€‚ï¼ˆã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãŒãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã•ã‚Œã‚‹ï¼‰ã€€ã€€
+ä»Šå›žã¯Windowsã‚’é¸æŠžã™ã‚‹ã€‚
 ![select](image/virtualbox_select.jpg)  
-3Dƒ_ƒEƒ“ƒ[ƒh‚³‚ê‚½ƒCƒ“ƒXƒg[ƒ‰‚ðŽÀs‚·‚é‚ÆŽŸ‚Ì‚æ‚¤‚É•\Ž¦‚³‚ê‚é‚Ì‚ÅAunextv‚ð‘I‘ð‚·‚éB 
+3ï¼Žãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã•ã‚ŒãŸã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ã‚’å®Ÿè¡Œã™ã‚‹ã¨æ¬¡ã®ã‚ˆã†ã«è¡¨ç¤ºã•ã‚Œã‚‹ã®ã§ã€ã€Œnextã€ã‚’é¸æŠžã™ã‚‹ã€‚ 
 <div align=center> 
   <img src=image/virtualbox_installer_begin.jpg>
 </div>
-5DVirtualBox‚ðƒCƒ“ƒXƒg[ƒ‹‚·‚éêŠ‚ÌŽw’è‚ª‚Å‚«‚éB
-¡‰ñ‚Í“Á‚É•ÏX‚·‚é•K—v‚ª‚È‚¢‚Ì‚Åunextv‚ð‘I‘ðB
+5ï¼ŽVirtualBoxã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å ´æ‰€ã®æŒ‡å®šãŒã§ãã‚‹ã€‚
+ä»Šå›žã¯ç‰¹ã«å¤‰æ›´ã™ã‚‹å¿…è¦ãŒãªã„ã®ã§ã€Œnextã€ã‚’é¸æŠžã€‚
 <div align=center> 
   <img src=image/virtualbox_installer_dir.jpg>
 </div>  
-6DƒCƒ“ƒXƒg[ƒ‹Œã‚ÌƒVƒ‡[ƒgƒJƒbƒg‚âƒAƒCƒRƒ“‚ÌÝ’èB
-‚±‚¿‚ç‚à“¯‚¶‚­•ÏX‚·‚é•K—v‚ª‚È‚¢‚Ì‚Åunextv‚ð‘I‘ðB
+6ï¼Žã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å¾Œã®ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚„ã‚¢ã‚¤ã‚³ãƒ³ã®è¨­å®šã€‚
+ã“ã¡ã‚‰ã‚‚åŒã˜ãå¤‰æ›´ã™ã‚‹å¿…è¦ãŒãªã„ã®ã§ã€Œnextã€ã‚’é¸æŠžã€‚
 <div align=center> 
   <img src=image/virtualbox_installer_icon.jpg>
 </div>  
-7DˆêŽž“I‚Éƒlƒbƒgƒ[ƒN‚ªØ’f‚³‚ê‚é‚Æ‚¢‚¤Œx‚ª‚Å‚é‚ª‚»‚Ì‚Ü‚ÜYes‚ð‘I‘ðB  
-(ƒCƒ“ƒXƒg[ƒ‹Œã•œ‹A‚·‚é‚Ì‚ÅAS”z‚µ‚È‚­‚Ä‚à—Ç‚¢B)
+7ï¼Žä¸€æ™‚çš„ã«ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ãŒåˆ‡æ–­ã•ã‚Œã‚‹ã¨ã„ã†è­¦å‘ŠãŒã§ã‚‹ãŒãã®ã¾ã¾Yesã‚’é¸æŠžã€‚  
+(ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å¾Œå¾©å¸°ã™ã‚‹ã®ã§ã€å¿ƒé…ã—ãªãã¦ã‚‚è‰¯ã„ã€‚)
 <div align=center> 
   <img src=image/virtualbox_installer_warn.jpg>
 </div>  
-8DƒCƒ“ƒXƒg[ƒ‹‚ÌÅIŠm”F‰æ–Ê‚ª•\Ž¦‚³‚ê‚é‚Ì‚Åuinstallv‚ð‘I‘ðB
+8ï¼Žã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã®æœ€çµ‚ç¢ºèªç”»é¢ãŒè¡¨ç¤ºã•ã‚Œã‚‹ã®ã§ã€Œinstallã€ã‚’é¸æŠžã€‚
 <div align=center> 
   <img src=image/virtualbox_installer_lastcheck.jpg>
 </div>  
-9DƒCƒ“ƒXƒg[ƒ‹Š®—¹ŒãuFinishv‚ðƒNƒŠƒbƒN‚·‚é‚ÆƒCƒ“ƒXƒg[ƒ‰‚ªI—¹‚µAVirtualBox‚ª‹N“®‚·‚éB
+9ï¼Žã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å®Œäº†å¾Œã€ŒFinishã€ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãŒçµ‚äº†ã—ã€VirtualBoxãŒèµ·å‹•ã™ã‚‹ã€‚
 <div align=center> 
   <img src=image/virtualbox_installer_finish.jpg>
 </div>  
