@@ -88,47 +88,47 @@
 <div align=center>
   <img src=image/CentOS7_custom.JPG>
 </div>  
-まずはインストールソースの設定をするので「インストールソース」を選択します。
+##### まずはインストールソースの設定をするので「インストールソース」を選択します。
 
 6. デバイスの選択で表示されているハードディスクを選択しチェックマークが入ることを確認したら「完了」を選択します。
 <div align=center>
   <img src=image/CentOS7_disc.JPG>
 </div>  
-続いて「ソフトウェアの選択」を選択します。
+##### 続いて「ソフトウェアの選択」を選択します。
 
 7. 今回はよく使われる統合デスクトップ環境「GNOME Desktop」と、アドオンの「GNOMEアプリケーション」を選択し、  
 完了を選択します。  
 <div align=center>
   <img src=image/CentOS7_GUI.JPG>
 </div>  
-次に「ネットワークとホスト名」を選択します。
+##### 次に「ネットワークとホスト名」を選択します。
 
 8. 今回は「イーサネット（enp0s3）」をONにし、完了を選択します。  
 （固定IPアドレスの設定は後でも行えます）
 <div align=center>
   <img src=image/CentOS7_network.JPG>
 </div>  
-ここまでで黄色の△が消えるので、「インストールの開始」を選択します。
+##### ここまでで黄色の△が消えるので、「インストールの開始」を選択します。
 
 9. インストールが開始しますが、ここでユーザ情報の設定を行うよう促されます。  
 <div align=center>
   <img src=image/CentOS7_custum.JPG>
 </div>  
-まずは「ROOTパスワード」を選択します。  
+##### まずは「ROOTパスワード」を選択します。  
 ※ROOTパスワードとはrootユーザ（管理者ユーザ）のパスワードです。  
 任意のパスワードを入力します。  
 <div align=center>
   <img src=image/CentOS7_password.JPG>
 </div>  
 （複雑な文字列が理想ですが、短くても完了を二度押せば4文字くらいでも作成できます）
-ROOTパスワードが作成できたら「ユーザの作成」を選択し、一般ユーザを作成します。
+##### ROOTパスワードが作成できたら「ユーザの作成」を選択し、一般ユーザを作成します。
 <div align=center>
   <img src=image/CentOS7_user_create.JPG>
 </div>  
 こちらも同じく単純なパスワードでも通ります。  
 その後、インストールが終わるまでしばらく待ちます。
 
-インストールが完了すると「再起動」を選択できるようになるので選択し、再起動します。  
+##### インストールが完了すると「再起動」を選択できるようになるので選択し、再起動します。  
 <div align=center>
   <img src=image/CentOS7_install_finish.JPG>
 </div>  
