@@ -2,10 +2,10 @@
 
 
 ## ①CentOS7のダウンロード
-1.　https://www.centos.org/download/　にアクセスして「DVD　ISO」をクリックする。
-2.　ミラーサイト一覧が表示されるので、適当なURLを選んでCentOS7のISOイメージをダウンロードする。
-3.　https://wiki.centos.org/Manuals/ReleaseNotes　にアクセスして対応したCentOS7系のリンクをクリック
-4.　下にスクロールしていくとダウンロードしたISOイメージに対応したハッシュ値が表示されているので、
+ 1.　https://www.centos.org/download/　にアクセスして「DVD　ISO」をクリックする。
+ 2.　ミラーサイト一覧が表示されるので、適当なURLを選んでCentOS7のISOイメージをダウンロードする。
+ 3.　https://wiki.centos.org/Manuals/ReleaseNotes　にアクセスして対応したCentOS7系のリンクをクリック
+ 4.　下にスクロールしていくとダウンロードしたISOイメージに対応したハッシュ値が表示されているので、
 　　ダウンロードしたISOイメージのハッシュ値と一致しているか確認を行う。
 　　（一致してない場合ダウンロードの失敗、改ざんなどの可能性があるので注意！）
 
