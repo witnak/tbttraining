@@ -1,53 +1,54 @@
 # フォーク元の更新に追いつく
 
-前提として
-  ・ Gitのインストール
-  ・ リポジトリをフォーク
-  ・ ローカルへのクローン
-が完了していること。
+前提として  
 
-1. `git branch -a` を実行しbranchの状態を確認します。
-以下のようになっています。
+* リポジトリをフォーク  
+* ローカルへのクローン  
+
+が完了していること。  
+
+1. まずブランチの確認を行う。
 ```
-$ git branch -a
-* master
+ $git branch -a
+ *master
   remotes/origin/HEAD -> origin/master
   remotes/origin/master
-
 ```
 
 2. リモートリポジトリとして、 upstream という名前で設定します。
 ```
-
 $ git remote add upstream https://github.com/witnak/tbttraining.git
-
 ```
+　このリポジトリは**upstream**という名前で本家リポジトリを参照する。　※一度設定すれば再設定の必要は無し。
 
-3. 再度`git branch -a` を実行しbranchの状態を確認します。
+3. もう一度ブランチの確認。
 ```
-$ git branch -a
-* master
-  remotes/origin/HEAD -> origin/master
-  remotes/origin/master
-  remotes/upstream/master
+ $git branch -a
+  *master
+   remotes/origin/HEAD -> origin/master
+   remotes/origin/master
+   remotes/upsteram/master
+```
+確認すると　**remotes/upstream/master**　が加わっている。  
+環境によって、```git fetch upstream``` の操作を行ってからでないと出てこない場合がある。　　
 
+4. フォーク元リポジトリの変更を取り出すために **fetch** と **merge** を使用する。
+  **fetch**　フォーク元リポジトリの情報を元にorigin/master（ローカルのリポジトリ）を更新。
 ```
-`remotes/upstream/master`という行が追加されているのがわかります。
-
-4. おおもとのリポジトリからローカルリポジトリに変更を適用するため、fetchとmergeを行います。
-まずはfetchから
+ $git fetch upstream
+ remote: Counting objects: 1, done.
+ remote: Total 1 (delta 0), reused 1 (delta 0)
+ Unpacking objects: 100% (1/1), done.
+ From [フォーク元のURL]
+  4d531a2..0d7c835  master     -> upstream/master
 ```
-$ git fetch upstream
-
+**merge**　origin/master　の更新情報を　master（ローカルの作業ディレクトリ） にマージ
 ```
-続いて、mergeをします。
+ $git merge upstream/master
+ readme.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 ```
-$ git merge upstream/master
-
-```
-ここで、対象になるファイルを開いたままにしていると、
-`Unlink of file`といったエラーが出てくることがあります。
-
+変更がない場合は"Already up-to-date."と表示される。
 
 ## fetch merge pullについて
 ### fetch
@@ -66,4 +67,3 @@ $ git merge upstream/master
   `$git pull`  
   このコマンドでmergeまでやってくれます。  
   ただし、マージしたくないものまでマージされるので注意が必要。
-
