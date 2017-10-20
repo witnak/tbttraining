@@ -20,3 +20,4 @@
 * RedmineのデータベースをPostgresqlからMariaDBへ切り替える
 * CentOS7にnginxをインストールしてapacheと切り替える
 * CentOS7にunicornをインストールしてRedmineと連携させる
+* CentOS7にpumaをインストールしてRedmineと連携させる
