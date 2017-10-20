@@ -171,19 +171,23 @@
 
 3. rootユーザの状態で、`visudo`を実行します
 
-4. 開いたファイルの最終行に、`【一般ユーザの名前】 ALL=(ALL) ALL`を追加します。
+4. 開いたファイルの最終行に、  
+`【一般ユーザの名前】 ALL=(ALL) ALL`  
+を追加します。  
 ※viとはエディタを表します。基本的な操作は https://net-newbie.com/linux/commands/vi.html を参照
 
-5. `:wq`を最後に入力しファイルを保存します。
+5.`i`で編集を有効化し、`Esc`キーで編集を終了、 `:wq`を最後に入力しファイルを保存します。
 
 6. その後rootユーザから抜けるため`exit`を入力します。
 
-7. 一般ユーザに戻ったことを確認したら、`sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3`を実行します。（一般ユーザのパスワードの入力を促されます）
+7. 一般ユーザに戻ったことを確認したら、  
+`sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3`  
+を実行します。（一般ユーザのパスワードの入力を促されます）
 
-8. `ONBOOT=no`という行を探し、`no`から`yes`に変更します。  
+8. `ONBOOT=no`という行を探し、`no`を`yes`に変更します。  
 <div align=center>
   <img src=image/CentOS7_onboot2.JPG>
 </div>  
-※ONBOOTをyesにすることで起動時にifcfg-enp0s3のネットワークを有効にすることができます。
+※ONBOOTをyesにすることで起動時にenp0s3のネットワークが有効になります。  
 
 9. 先ほどと同じように`:wq`で保存をすると、ネットワークが有効になります。
