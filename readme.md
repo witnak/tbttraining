@@ -21,3 +21,8 @@
 * CentOS7にnginxをインストールしてapacheと切り替える
 * CentOS7にunicornをインストールしてRedmineと連携させる
 * CentOS7にpumaをインストールしてRedmineと連携させる
+
+## VirtualBox Tips
+
+* 別のマシンからVirtualBoxで走っている仮想マシンにアクセスできるようにする
+* VirtualBox内に二つの仮想マシンを作り、それぞれDBサーバとアプリケーションサーバとする
