@@ -141,7 +141,7 @@
 
 10.　再起動後、下のようなログイン画面が表示されるので、先ほど作成した一般ユーザのパスワードでログインをします。
 <div align=center>
-  <img src=image/CentOS7_user_login.JPG>
+  <img src=image/CentOS7_login.JPG>
 </div>  
 
 11. ログイン後言語を選択する画面が表示されるので、「日本語」を選択します。
@@ -155,3 +155,35 @@
 <div align=center>
   <img src=image/CentOS7_fin.JPG>
 </div>  
+
+## インストール後の設定
+
+### ネットワークを有効にする
+初期設定ではネットワークが無効となっているので設定をします。  
+併せて、sudoコマンド（rootユーザにならなくても作業ができるコマンド）が使えるように設定も行います。  
+
+1. 「全てのアプリケーション」から「お気に入り」の「端末」を選択しターミナルを実行します。
+<div align=center>
+  <img src=image/CentOS7_terminal.JPG>
+</div>  
+
+2. sudoの設定を行うため、`su -`を実行しrootユーザになります
+
+3. rootユーザの状態で、`visudo`を実行します
+
+4. 開いたファイルの最終行に、`【一般ユーザの名前】 ALL=(ALL) ALL`を追加します。
+※viとはエディタを表します。基本的な操作は https://net-newbie.com/linux/commands/vi.html を参照
+
+5. `:wq`を最後に入力しファイルを保存します。
+
+6. その後rootユーザから抜けるため`exit`を入力します。
+
+7. 一般ユーザに戻ったことを確認したら、`sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3`を実行します。（一般ユーザのパスワードの入力を促されます）
+
+8. `ONBOOT=no`という行を探し、`no`から`yes`に変更します。  
+<div align=center>
+  <img src=image/CentOS7_onboot2.JPG>
+</div>  
+※ONBOOTをyesにすることで起動時にifcfg-enp0s3のネットワークを有効にすることができます。
+
+9. 先ほどと同じように`:wq`で保存をすると、ネットワークが有効になります。
