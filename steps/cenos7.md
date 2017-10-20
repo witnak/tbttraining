@@ -116,7 +116,7 @@
 
 9. インストールが開始しますが、ここでユーザ情報の設定を行うよう促されます。  
 <div align=center>
-  <img src=image/CentOS7_custum.JPG>
+  <img src=image/CentOS7_user_custum.JPG>
 </div>  
 
 #### まずは「ROOTパスワード」を選択します。  
