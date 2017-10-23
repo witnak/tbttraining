@@ -75,7 +75,7 @@
 ## ⑤SSHクライアント(Tera Term)の設定
 1. デスクトップ上にショートカットアイコンが作成されているので起動させる。
 2. 以下のような画面が起動する。<br>
-   <img src=image/SHH1.JPG><br>
+   <img src=image/SSH1.JPG><br>
    * TCPポート:22・・・このポート番号で仮想環境に接続するために、VirtualBoxのインターフェイス上で設定をする。<br>
      1. VirtualBoxを起動して、使用する仮想マシンを選択して[設定]をクリック
         <img src=image/VirtualBox_IF.JPG>
