@@ -211,15 +211,15 @@
   今回は「Tera Term」を利用してリモート操作を行ってみます。
 
 ### Tera Termのインストール
-  0. 「Tera Term」は窓の杜（まどのもり）からダウンロードできます。以下URL  
+  1. 「Tera Term」は窓の杜（まどのもり）からダウンロードできます。以下URL  
   https://forest.watch.impress.co.jp/library/software/utf8teraterm/  
 
-  0. 「Tera Term」の右にある「窓の杜からダウンロード」を選択し、ダウンロードします。  
+  2. 「Tera Term」の右にある「窓の杜からダウンロード」を選択し、ダウンロードします。  
   <div align=center>
     <img src=image/TeraTerm_download.JPG>
   </div>  
 
-  0. ダウンロードしたexeファイルを実行し、手順に沿ってインストールを行います。  
+  3. ダウンロードしたexeファイルを実行し、手順に沿ってインストールを行います。  
   （初期値のままで支障はないので、すべてそのまま進めてOK）
 
 ### 接続先のIPアドレスを確認する
@@ -227,27 +227,27 @@
   「Tera Term」でSSH接続するには接続先のIPアドレスを確認し入力する必要があります。  
   IPアドレスを確認するには、CentOS上のターミナルで操作をします。
 
-  0. CentOSでターミナルを起動します
+  1. CentOSでターミナルを起動します
 
-  0. `ifconfig`を入力し、実行します。
+  2. `ifconfig`を入力し、実行します。
 
-  0. 接続先のネットワーク情報が表示されるので、「enp0s3」の「inet」を確認します。
+  3. 接続先のネットワーク情報が表示されるので、「enp0s3」の「inet」を確認します。
   「inet」に記載されているのがCentOSに設定されているIPアドレスです。
 
 ### Tera TermからSSH接続する
 
-  0. Tera Termを起動します。  
+  1. Tera Termを起動します。  
   起動すると、下画像のような画面が表示されるので、先ほど確認したIPアドレスを「ホスト（T）」の部分に入力し「OK」を選択します。  
   <div align=center>
     <img src=image/TeraTerm_host.JPG>
   </div>  
 
-  0. SSH認証画面が表示されるので、CentOSで作成したユーザの「ユーザ名」・「パスワード」を入力します。
+  2. SSH認証画面が表示されるので、CentOSで作成したユーザの「ユーザ名」・「パスワード」を入力します。
 
-  0. ログイン後以下のような状態になれば、接続成功です。
+  3. ログイン後以下のような状態になれば、接続成功です。
   <div align=center>
     <img src=image/TeraTerm_fin.JPG>
   </div>  
 
-  0. 以降ほとんどの作業が「Tera term」で行えるようになります。
+  4. 以降ほとんどの作業が「Tera term」で行えるようになります。
   （仮想マシンは起動しておく必要があります。）
