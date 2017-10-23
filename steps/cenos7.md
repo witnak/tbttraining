@@ -82,5 +82,7 @@
       <img src=image/VirtualBox_IF.JPG>
    2. ネットワークを選択して「高度」をクリック<br>
       <img src=image/VirtualBox_IF1.JPG>
+   3. ポートフォワーディングをクリック<br>
+      <img src=image/VirtualBox_IF2.JPG>
 4. ホスト
 　　　　
