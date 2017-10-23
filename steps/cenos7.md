@@ -76,17 +76,17 @@
 
   1. Virtualboxで先ほど作成した仮想マシンを選択し、「設定」を選択します。
   <div align=center>
-    <img src=image/Virtualbox_config.jpg>
+    <img src=image/Virtualbox_config.JPG>
   </div>  
 
   2. 「ネットワーク」を選択すると、初期状態では「アダプター1」に「NAT」が設定されています。
   <div align=center>
-    <img src=image/Virtualbox_network.jpg>
+    <img src=image/Virtualbox_network.JPG>
   </div>  
 
   3. 「アダプター1」を「NAT」から「ブリッジアダプター」、  
-  「アダプター2」の「ネットワークアダプターを有効化」にチェックを入れ「ホストオンリーアダプター」割り当てます。  
-  <img src=image/Virtualbox_adapter1.jpg><img src=image/Virtualbox_adapter2.jpg>
+  「アダプター2」の「ネットワークアダプターを有効化」にチェックを入れ「ホストオンリーアダプター」を割り当てます。  
+  <img src=image/Virtualbox_adapter1.JPG><img src=image/Virtualbox_adapter2.JPG>
 
 
 ## CentOS7のインストール
