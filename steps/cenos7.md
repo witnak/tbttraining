@@ -88,6 +88,7 @@
   「アダプター2」の「ネットワークアダプターを有効化」にチェックを入れ「ホストオンリーアダプター」を割り当てます。  
   <img src=image/Virtualbox_adapter1.JPG><img src=image/Virtualbox_adapter2.JPG>
 
+#### 以上でネットワークの設定は完了です。
 
 ## CentOS7のインストール
 
