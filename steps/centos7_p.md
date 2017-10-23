@@ -1,5 +1,4 @@
-﻿# CentOS7を仮想環境に構築する
-
+# CentOS7を仮想環境に構築する
 
 ## ①CentOS7のダウンロード
  1. 下記URLにアクセスして「DVD　ISO」をクリック。 https://www.centos.org/download/

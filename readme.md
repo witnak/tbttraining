@@ -14,7 +14,7 @@
 
 * [VirtualBoxをインストールする](steps/virtualbox_install.md)
 * CentOS7を仮想環境に構築する
-  * [ホストPCとブリッジで接続する](steps/cenos7_b.md)
+  * [ホストPCとブリッジで接続する](steps/centos7_b.md)
   * [ホストPCとポートフォワードで接続する](steps/centos7_p.md)
 * [CentOS7にrbenvをインストールする](steps/rbenv.md)
 * [CentOS7にRedmineをインストールする](steps/redmine.md)

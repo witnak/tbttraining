@@ -44,7 +44,7 @@
 <div align=center>
   <img src=image/CentOS7_harddisc.jpg>
 </div>  
- 
+
 
 5. ハードディスクのファイルタイプを選択します。  
 今回はVMDKにチェックを入れ「作成」を選択します。  
