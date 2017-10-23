@@ -57,8 +57,8 @@
 9. **準備完了**<br>
    「CentOS Linux を使い始める(S)」をクリック
 ## ④SSH設定
-1. 下記URLにアクセスしてTera Termをダウンロード https://ja.osdn.net/projects/ttssh2/releases/ <br>
-
+1. 下記URLにアクセスして、赤枠の部分をクリックしてダウンロード https://ja.osdn.net/projects/ttssh2/releases/ <br>
+   <img src=image/SSH.JPG>
 2.     
 　　　
 　　　　
