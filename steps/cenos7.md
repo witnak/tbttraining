@@ -84,6 +84,7 @@
       <img src=image/VirtualBox_IF1.JPG>
    3. ポートフォワーディングをクリック<br>
       <img src=image/VirtualBox_IF2.JPG>
-   4. <img src=image/VirtualBox_IF4.JPG>をクリックして追加する。
+   4. <img src=image/VirtualBox_IF4.JPG>をクリックした後、ホストポート、ゲストポートに22を入力して「OK」をクリック<br>
+      <img src=image/VirtualBox_IF5.JPG>
 4. ホスト
 　　　　
