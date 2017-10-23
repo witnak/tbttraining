@@ -87,8 +87,10 @@
    4. <img src=image/VirtualBox_IF4.JPG>をクリックした後、ホストポート、ゲストポートに22を入力して「OK」をクリック<br>
       <img src=image/VirtualBox_IF3.JPG><br>
       異常でVirtualBoxの設定は完了。
-4. **ホスト**
-   ローカルマシンのIPアドレスを入力する。下記コマンドでIPアドレスを確認できる。<br>
+4. **ホスト**<br>
+   TeraTermの画面に戻って、ローカルマシンのIPアドレスを入力する。<br>
+   <img src=image/SSH1.JPG>
+   下記コマンドでIPアドレスを確認できる。<br>
    ```
    $ipconfig
 
