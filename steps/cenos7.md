@@ -69,6 +69,26 @@
 
 #### VirtualBoxに先ほど作成した仮想マシンが表示されれば完了です。  
 
+## 作成した仮想マシンのネットワークの設定
+
+  先ほど作成した仮想マシンは、外部からの通信（SSH接続など）を受け付けないネットワークの設定になっています。  
+  ここでは外部からの通信を受け付けるように設定を行います。  
+
+  1. Virtualboxで先ほど作成した仮想マシンを選択し、「設定」を選択します。
+  <div align=center>
+    <img src=image/Virtualbox_config.jpg>
+  </div>  
+
+  2. 「ネットワーク」を選択すると、初期状態では「アダプター1」に「NAT」が設定されています。
+  <div align=center>
+    <img src=image/Virtualbox_network.jpg>
+  </div>  
+
+  3. 「アダプター1」を「NAT」から「ブリッジアダプター」、  
+  「アダプター2」の「ネットワークアダプターを有効化」にチェックを入れ「ホストオンリーアダプター」割り当てます。  
+  <img src=image/Virtualbox_adapter1.jpg><img src=image/Virtualbox_adapter2.jpg>
+
+
 ## CentOS7のインストール
 
 1. 先ほど作成した仮想マシン「Training」を選択し、右上の起動を選択します。
@@ -193,7 +213,7 @@
   <img src=image/CentOS7_onboot2.JPG>
 </div>  
 ※ONBOOTをyesにすることで起動時にenp0s3のネットワークが有効になります。  
-  
+
 9. 先ほどと同じように、`:wq`で保存をすると、ネットワークが有効になります。
 
 ## 作成した仮想マシンにSSHクライアントでアクセスする
