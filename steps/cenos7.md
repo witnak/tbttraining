@@ -77,8 +77,8 @@
 2. 以下のような画面が起動する。<br>
    <img src=image/SSH3.JPG><br>
 3. **TCPポート#(P): 22**<br>
-   <img src=image/SSH5.JPG><br>
- * このポート番号で仮想環境に接続するために、VirtualBoxのインターフェイス上で設定をする。<br>
+   <img src=image/SSH4.JPG><br>
+ * 上記のポート番号で仮想環境に接続するために、VirtualBoxのインターフェイス上で設定をする。<br>
    1. VirtualBoxを起動して、使用する仮想マシンを選択して[設定]をクリック<br>
       <img src=image/VirtualBox_IF.JPG>
    2. ネットワークを選択して「高度」をクリック<br>
@@ -90,7 +90,7 @@
       異常でVirtualBoxの設定は完了。
 4. **ホスト**<br>
    TeraTermの画面に戻って、ローカルマシンのIPアドレスを入力する。<br>
-   <img src=image/SSH4.JPG><br>
+   <img src=image/SSH5.JPG><br>
    下記コマンドでIPアドレスを確認できる。<br>
    ```
    $ipconfig
