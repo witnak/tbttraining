@@ -57,7 +57,7 @@
 9. **準備完了**<br>
    「CentOS Linux を使い始める(S)」をクリック
 ## ④SSHクライアント(Tera Term)インストール
-1. 下記URLにアクセスして、赤枠の部分をクリックしてダウンロード https://ja.osdn.net/projects/ttssh2/releases/ <br>
+1. 画像の赤枠で囲まれた部分を、下記URLにアクセスしてクリック https://ja.osdn.net/projects/ttssh2/releases/ <br>
    <img src=image/SSH.JPG><br>
    ダウンロードできたexeファイルを起動する。
 2. **インストール中に利用する言語**<br>
