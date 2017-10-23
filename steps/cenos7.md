@@ -84,5 +84,6 @@
       <img src=image/VirtualBox_IF1.JPG>
    3. ポートフォワーディングをクリック<br>
       <img src=image/VirtualBox_IF2.JPG>
+   4. <img src=image/VirtualBox_IF4.JPG>をクリックして追加する。
 4. ホスト
 　　　　
