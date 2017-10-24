@@ -10,7 +10,7 @@
 * [ローカルへクローン](github/cloneintolocal.md)
 * [fork元の更新に追いつく](github/setupstream.md)
 
-## 開発環境構築
+## VirtualBoxでの開発環境構築
 
 * [VirtualBoxをインストールする](steps/virtualbox_install.md)
 * CentOS7を仮想環境に構築する
@@ -29,8 +29,10 @@
 * 別のマシンからVirtualBoxで走っている仮想マシンにアクセスできるようにする
 * VirtualBox内に二つの仮想マシンを作り、それぞれDBサーバとアプリケーションサーバとする
 
-## Docker
+## Dockerでの開発環境構築
 
-* [Windows10でのDocker](docker/docker_on_windows.md)
-* Windows8以下でのDocker
-* MacでのDocker
+* [Windows10でのDockerインストール](docker/docker_on_windows.md)
+* [Windows8以下でのDockerインストール](docker/docker_tools_for_win.md)
+* MacでのDockerインストール
+
+* [DockerによるRails動作環境を作る](docker/rails_on_docker.md)
