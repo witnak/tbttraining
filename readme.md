@@ -31,8 +31,8 @@
 
 ## Dockerでの開発環境構築
 
-* [Windows10でのDockerインストール](docker/docker_on_windows.md)
-* [Windows8以下でのDockerインストール](docker/docker_tools_for_win.md)
+* [Windows10でのDockerインストール](docker/docker_for_windows.md)
+* [Windows8以下でのDockerインストール](docker/docker_toolbox_for_win.md)
 * MacでのDockerインストール
 
 * [DockerによるRails動作環境を作る](docker/rails_on_docker.md)
