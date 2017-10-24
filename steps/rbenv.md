@@ -24,10 +24,8 @@
 
   を実行します。
 
-  3. 続いてrbenvのインストールを行います。githubのリポジトリをクローンします。  
-  ここからはrootユーザで作業をします。
+  3. 続いてrbenvのインストールを行います。githubのリポジトリをホームディレクトリにクローンします。  
 ```
-  $ su -
 
   $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 
