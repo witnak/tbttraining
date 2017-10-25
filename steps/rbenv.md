@@ -1,7 +1,16 @@
 # CentOS7にrbenvをインストールする
 ## 前提
-  git cloneを使用するので、gitがインストールされていない場合は`sudo yum install -y git`でイン   ストールする。<br>
+  git cloneを使用するので、gitがインストールされていない場合は`sudo yum install -y git`でイン   ストールする。
+  <br>
+  <br>
   基本はローカルユーザーで操作する。
+  <br>
+  <br>
+  下記のパッケージをインストールする。<br>
+  `sudo yum install -y openssl-devel readline-devel zlib-devel gcc`<br>
+  ※インストールしておかないとRubyインストール時にエラーを吐かれる。
+  <br>
+  <br>
 
 ## 1. rbenvのインストール
   下記コマンドは1番上の階層のディレクトリで実行する。<br>
@@ -33,13 +42,9 @@
   $ rbenv --version　　#バージョンが確認ができればOK
   $ exit             #ローカルユーザーに戻る
   ```
-  ※バージョン確認ができない場合は /usr/local/src/ まで移動して下記コマンドを実行してパーミッション変更<br>
-  `sudo chmod 777 rbenv`<br>
+
 ## 3. Rubyのインストール
-1. Rubyをinstallする前に下記コマンドを実行<br>
-  `sudo yum install -y openssl-devel readline-devel zlib-devel gcc`<br>
-  ※上記のパッケージをインストールしておかないとRubyインストール時にエラーを吐かれる。<br><br>
-2. **Rubyのインストール**
+  **Rubyのインストール**
   * `rbenv install -l`<br>
   インストールできるRubyのバージョン一覧を表示
   * `rbenv install バージョン`<br>
@@ -50,11 +55,20 @@
 ## 4. 使用するRubyのバージョンを決める
 1. **システム全体で使う場合**<br>
   `rbenv global バージョン`<br>
-  インストール済みのRubyからバージョンを指定して変更可能<br>
-  **※ローカルユーザーでRubyのバージョン変更ができない場合**<br>
-    /usr/local/src/rbnev/　のversionファイルのパーミッションを下記コマンドで変更<br>
-    `sudo chmod 777 version`<br>
-    これでバージョン変更が可能になる。<br><br>
+  インストール済みのRubyからバージョンを指定して変更可能
+  <br>
+  <br>
 2. **プロジェクト単体でRubyのバージョンを変える場合**<br>
   `rbenv local バージョン`<br>
   上記のコマンドを実行する際は対象のプロジェクトのディレクトで行う。
+  <br>
+  <br>
+
+#### ※Rubyのバージョンが確認できない場合
+  バージョン確認ができない場合は /usr/local/src/ まで移動して下記コマンドを実行してパーミッション変更<br>
+  `sudo chmod 777 rbenv`<br
+
+#### ※ローカルユーザーでRubyのバージョン変更したい場合
+  /usr/local/src/rbnev/　のversionファイルのパーミッションを下記コマンドで変更<br>
+  `sudo chmod 777 version`<br>
+  これでバージョン変更が可能になる。<br><br>
