@@ -57,7 +57,7 @@
   
   ここからは実際にrubyのインストールを行います。
   
-  1. rbenvコマンドを使ってrubyをインストールできるように「ruby-build」を追加します。
+  1. rbenvコマンドを使ってrubyをインストールできるように「ruby-build」を追加します。  
   rbenvと同じくgithubのリポジトリをクローンします。
 ```
   $ git clone https://github.com/sstephenson/ruby-build.git /usr/local/src/rbenv/plugins/ruby-build
@@ -122,7 +122,7 @@
   `ruby -v`の結果が`ruby 2.3.3 ...`になっていればrbenvによるrubyのバージョンの切り替えができています。
 
 ## 全ユーザ共通でrbenvを利用する
-  現在の設定では`su -`でrootユーザになってからでないとrbenvを利用できません。
+  現在の設定では`su -`でrootユーザになってからでないとrbenvを利用できません。  
   ローカルユーザでも利用できるよう設定を行います。
 
   1. `su -`でrootユーザになっている場合`exit`で抜けます。
