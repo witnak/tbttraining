@@ -8,6 +8,8 @@
 
 ## rbenvのインストール
 
+  ひとまずはrootユーザでのみ利用できるようにインストールを行います。
+
   1. 事前準備としてyumのアップデートを行います。  
   ターミナルで、  
 ```
@@ -16,9 +18,11 @@
   を実行してください。  
   （yumとは、様々なパッケージをインストール・アップデートなどが行えるパッケージ管理システムです。）
 
-  2. アップデートが完了したらrbenvの利用に必要なパッケージをインストールするため、  
+  2. アップデートが完了したらrbenvの利用に必要なパッケージをインストールするため、、  
 ```
-  $ sudo yum -y install git gcc gcc-c++ openssl-devel readline-devel  
+  $ su - ←rootユーザになる
+
+  $ yum -y install git gcc gcc-c++ openssl-devel readline-devel  
 
 ```
 
@@ -35,11 +39,13 @@
   4. 次に、ユーザの環境変数を設定する「bash_profile」にrbenvのパスを追加します。  
   以下のコマンドをひとつずつ実行してください。
 ```
-  $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+  $ echo 'export RBENV_ROOT="/usr/local/src/rbenv/"' >> /etc/profile.d/rbenv.sh
 
-  $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+  $ echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> /etc/profile.d/rbenv.sh
 
-  $ source ~/.bash_profile
+  $ echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
+
+  $ source /etc/profile.d/rbenv.sh
 ```
   5. 正常にインストールできたか確認するためrbenvのバージョンを確認します
 ```
@@ -94,14 +100,13 @@
 ```
   $ rbenv install -v 2.3.3
 
-  $ rbenv rehash
 ```
 
   6. ruby(2.3.3)がインストールされたか確認をします。
 ```
   $ rbenv versions
     2.3.3
-    *2.4.2 (set by /root/.rbenv/version)
+    * 2.4.2 (set by /usr/local/src/rbenv/version)
 ```
   `*`が現在のバージョンを示します。
 
@@ -116,3 +121,46 @@
     ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux] ←ruby(2.3.3)へ切り替わっている。
 ```
   `ruby -v`の結果が`ruby 2.3.3 ...`になっていればrbenvによるrubyのバージョンの切り替えができています。
+
+## ログインしたユーザでrbenvを利用する
+  現在の設定では`su -`でrootユーザになってからでないとrbenvを利用できません。
+  ローカルユーザでも利用できるよう設定を行います。
+
+  1. `su -`でrootユーザになっている場合`exit`で抜けます。
+
+  2. 以下コマンドを実行し、環境変数の設定を適用します。
+```
+
+  $ source /etc/profile.d/rbenv.sh
+
+```
+
+  3. rbenvが利用できるかどうか確認するため、以下コマンドを実行します。
+```
+
+  $ rbenv --verison
+    rbenv 1.1.1-6-g2d7cefe
+
+```
+
+  4. rootユーザでインストールしたrubyが適用されているか確認をします。
+```
+
+  $ rbenv verisons
+    * 2.3.3 (set by /usr/local/src/rbenv/version)
+    2.4.2
+
+  $ ruby -v
+    ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+
+```
+
+  5. rubyをローカルユーザでインストールする場合はsudoでroot権限を持ってからインストールをします。
+```
+
+  $ sudo env "PATH=$PATH" rbenv install -v [バージョン]
+    ↑環境変数を維持するため「env "PATH=$PATH"」を追記します。
+
+```
+  ローカルユーザでインストールしたrubyはrootユーザでも、  
+  rootユーザでインストールしたrubyはrローカルユーザでも利用できるようになっています。
