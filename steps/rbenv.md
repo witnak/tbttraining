@@ -1,6 +1,6 @@
 # CentOS7にrbenvをインストールする
 ## 前提
-  git cloneを使用するので、gitがインストールされていない場合は`sudo yum install -y git`でイン   ストールする<br>
+  git cloneを使用するので、gitがインストールされていない場合は`sudo yum install -y git`でイン   ストールする。<br>
   基本はローカルユーザーで操作する。
 
 ## 1. rbenvのインストール
