@@ -36,7 +36,7 @@
 ```
   を実行します。
 
-  4. 次に、ユーザの環境変数を設定する「bash_profile」にrbenvのパスを追加します。  
+  4. 次に、ユーザの環境変数を設定するファイル（rbenv.sh)を作成し、パスを追加します。  
   以下のコマンドをひとつずつ実行してください。
 ```
   $ echo 'export RBENV_ROOT="/usr/local/src/rbenv/"' >> /etc/profile.d/rbenv.sh
