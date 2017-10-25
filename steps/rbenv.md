@@ -11,16 +11,16 @@
   ひとまずはrootユーザでのみ利用できるようにインストールを行います。
 
   1. 事前準備としてyumのアップデートを行います。  
-  ターミナルで、  
+  まずrootユーザになるターミナルで、  
 ```
-  $ sudo yum -y update
+  $ su -
 ```
   を実行してください。  
   （yumとは、様々なパッケージをインストール・アップデートなどが行えるパッケージ管理システムです。）
 
-  2. アップデートが完了したらrbenvの利用に必要なパッケージをインストールするため、、  
+  2. その後、実際にアップデートと、rbenvを利用するのに必要なパッケージをインストールするため、  
 ```
-  $ su - ←rootユーザになる
+  $ yum -y update
 
   $ yum -y install git gcc gcc-c++ zlib-devel openssl-devel readline-devel  
 
@@ -137,7 +137,7 @@
   3. rbenvが利用できるかどうか確認するため、以下コマンドを実行します。
 ```
 
-  $ rbenv --verison
+  $ rbenv --version
     rbenv 1.1.1-6-g2d7cefe
 
 ```
@@ -145,7 +145,7 @@
   4. rootユーザでインストールしたrubyが適用されているか確認をします。
 ```
 
-  $ rbenv verisons
+  $ rbenv versions
     * 2.3.3 (set by /usr/local/src/rbenv/version)
     2.4.2
 
@@ -162,4 +162,4 @@
 
 ```
   ローカルユーザでインストールしたrubyはrootユーザでも、  
-  rootユーザでインストールしたrubyはrローカルユーザでも利用できるようになっています。
+  rootユーザでインストールしたrubyはローカルユーザでも利用できるようになっています。
