@@ -22,7 +22,7 @@
 ```
   $ su - ←rootユーザになる
 
-  $ yum -y install git gcc gcc-c++ openssl-devel readline-devel  
+  $ yum -y install git gcc gcc-c++ zlib-devel openssl-devel readline-devel  
 
 ```
 
@@ -31,7 +31,7 @@
   3. 続いてrbenvのインストールを行います。githubのリポジトリをホームディレクトリにクローンします。  
 ```
 
-  $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+  $ git clone https://github.com/sstephenson/rbenv.git /usr/local/src/rbenv
 
 ```
   を実行します。
@@ -60,7 +60,7 @@
   1. rbenvコマンドを使ってrubyをインストールできるように「ruby-build」を追加します。
   rbenvと同じくgithubのリポジトリをクローンします。
 ```
-  $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  $ git clone https://github.com/sstephenson/ruby-build.git /usr/local/src/rbenv/plugins/ruby-build
 ```
   を実行します。
 
@@ -87,7 +87,6 @@
 ```
   $ rbenv install -v 2.4.2
 
-  $ rbenv rehash
 ```
 
   4. ruby(2.4.2)がインストールされたかを確認します。
@@ -122,7 +121,7 @@
 ```
   `ruby -v`の結果が`ruby 2.3.3 ...`になっていればrbenvによるrubyのバージョンの切り替えができています。
 
-## ログインしたユーザでrbenvを利用する
+## 全ユーザ共通でrbenvを利用する
   現在の設定では`su -`でrootユーザになってからでないとrbenvを利用できません。
   ローカルユーザでも利用できるよう設定を行います。
 
