@@ -18,7 +18,7 @@
   * [ホストPCとポートフォワードで接続する](steps/centos7_p.md)
 * [CentOS7にrbenvをインストールする](steps/rbenv.md)
 * [CentOS7にRedmineをインストールする](steps/redmine.md)
-* CentOS7にMariaDBをインストールする
+* [CentOS7にMariaDBをインストールする](steps/mariadb_install.md)
 * RedmineのデータベースをPostgresqlからMariaDBへ切り替える
 * CentOS7にnginxをインストールしてapacheと切り替える
 * CentOS7にunicornをインストールしてRedmineと連携させる
