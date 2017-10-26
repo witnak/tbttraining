@@ -211,7 +211,7 @@ Redmineを利用するには以下をインストールする必要がありま�
 
 ```
 
-  $ svn checkout https://svn.redmine.org/redmine/brnches/3.4-stable /var/lib/redmine
+  $ svn checkout https://svn.redmine.org/redmine/branches/3.4-stable/ /var/lib/redmine
 
 ```
 
@@ -261,7 +261,7 @@ Redmineを利用するには以下をインストールする必要がありま�
   3. 最後にgemパッケージのインストールを行います。  
   gemとはRubyのライブラリを利用するために必要なソフトウェアです。gemにRails開発が楽にできるようになります。  
   インストールするgemパッケージは`Gemfile`に書かれています。また、新たにインストールするときも`Gemfile`に記述します。
-  
+
 　　ではgemパッケージをインストールします。
 ```
 
@@ -311,7 +311,7 @@ Redmineを利用するには以下をインストールする必要がありま�
   2. 次にPassengerのApache用モジュールをインストールします。
 ```
 
-  $ passenger-insall-apache2-module --auto --langueges ruby
+  $ passenger-install-apache2-module --auto --languages ruby
 
 ```
 
@@ -416,7 +416,7 @@ Redmineを利用するには以下をインストールする必要がありま�
 　　　　ログインID:admin  
 　　　　パスワード:admin  
   でログインができます。
-  
+
   2. ログインをするとパスワードを変更する画面が表示されるので、任意のパスワードに必ず変更してください。
 
   3. パスワードを変更すると、管理者ユーザ（admin）の詳細ページが表示されます。  
