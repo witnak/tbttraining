@@ -409,7 +409,7 @@ Redmineを利用するには以下をインストールする必要がありま�
 
   1. ログインは右上の「ログイン」からできます。
 <div align=center>
-  <img src=image/redmine_home.jpg>
+  <img src=image/redmine_home.JPG>
 </div>  
 
   現在初期データとして、管理者ユーザ（admin）が登録されています。  
