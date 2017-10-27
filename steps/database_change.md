@@ -8,7 +8,8 @@
   現在はこのような設定になっていると思います。
 <div align=center>
   <img src="image/Redmine_info.JPG">
-</div>
+</div>  
+
   *Database adapterがPostgreSQLになっています*
 
   2. PostgreSQLが設定されていることがわかったら、MariaDBに切り替える作業をします。  
@@ -100,7 +101,8 @@
   7. 再起動後Redmineにアクセスし、手順1と同じように、管理者でログイン→管理→情報と進みます。  
 <div align=center>
   <img src="image/Redmine_info_changed.JPG">
-</div>
+</div>  
+
   *Database adapterがMysql2になっています*
 
   ※MariaDBはMySQLの派生DBMSのため、各種設定ファイルにはMySQL2を記述します。  
