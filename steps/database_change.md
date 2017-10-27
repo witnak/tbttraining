@@ -1,4 +1,4 @@
-# RedmineのデータベースをPostgreSQLからMariaDBへ切り替える
+## RedmineのデータベースをPostgreSQLからMariaDBへ切り替える
 
   Redmineのインストール手順でDBをPostgreSQLに設定していました。  
   今回はこのRedmineのDBを前手順でインストールしたMariaDBに切り替えます。
@@ -79,7 +79,7 @@
 
 ```
 
-  #データの書き出し
+  # データの書き出し
   $ bundle exec rake db:dump RAILS_ENV=production
 
 ```
