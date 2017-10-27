@@ -2,15 +2,15 @@
 
 ## MariaDBとは
   MariaDBとは、MySQLから派生したオープンソースのリレーショナルデータベースです。  
-  MySQLとの互換性を保ちつつ、性能などを高めるため、独自の機能を備えています。  
-  MySQLからMariaDBへの移行が容易であることから、MariaDBユーザは増えています。
+  MySQLとの互換性を保ちつつ、性能などを高めるため、独自の機能を備えています。
 
 ## MariaDBをインストールする
   **今回のコマンドはrootユーザで行うものとします。**  
-  1. まずはMariaDBをインストールするので以下のコマンドを実行してください。
+  1. まずはMariaDBをインストールするので以下のコマンドを実行してください。  
+     併せてmysqlのインストールも行っておきます。
 
 ```
-  $ yum -y install mariadb mariadb-server
+  $ yum -y install mariadb mariadb-server mysql-devel
 
 ```
 
