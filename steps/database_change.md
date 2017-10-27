@@ -7,7 +7,7 @@
   RedmineにWebブラウザからアクセスし、`管理者でログイン→管理→情報`と進みます。  
   現在はこのような設定になっていると思います。
 <div align=center>
-  <img src="image/Redmine_info.JPG">
+  <img src="image/redmine_info_before.JPG">
 </div>  
 
   *Database adapterがPostgreSQLになっています*
@@ -100,7 +100,7 @@
 
   7. 再起動後Redmineにアクセスし、手順1と同じように、管理者でログイン→管理→情報と進みます。  
 <div align=center>
-  <img src="image/Redmine_info_changed.JPG">
+  <img src="image/redmine_info_after.JPG">
 </div>  
 
   *Database adapterがMysql2になっています*
