@@ -4,7 +4,7 @@
   今回はこのRedmineのDBを前手順でインストールしたMariaDBに切り替えます。
 
   1. まずは現在のDBの設定を確認します。  
-  RedmineにWebブラウザからアクセスし、`管理者でログイン→管理→情報`と進みます。  
+  RedmineにWebブラウザからアクセスし、*管理者でログイン→管理→情報*と進みます。  
   現在はこのような設定になっていると思います。
 <div align=center>
   <img src="image/redmine_info_before.JPG">
@@ -98,7 +98,7 @@
 
 ```
 
-  7. 再起動後Redmineにアクセスし、手順1と同じように、管理者でログイン→管理→情報と進みます。  
+  7. 再起動後Redmineにアクセスし、手順1と同じように、*管理者でログイン→管理→情報*と進みます。  
 <div align=center>
   <img src="image/redmine_info_after.JPG">
 </div>  
