@@ -1,10 +1,8 @@
 # CentOS7にrbenvをインストールする
 ## 前提
-  git cloneを使用するので、gitがインストールされていない場合は`sudo yum install -y git`でイン   ストールする。
+  git cloneを使用するので、gitがインストールされていない場合は`sudo yum install -y git`でイン   ストールする。  
   <br>
-  <br>
-  基本はローカルユーザーで操作する。
-  <br>
+  基本rootユーザーで操作する。  
   <br>
   下記のパッケージをインストールする。<br>
   `sudo yum install -y openssl-devel readline-devel zlib-devel gcc`<br>
@@ -16,35 +14,43 @@
   下記コマンドは1番上の階層のディレクトリで実行する。<br>
   ```
   $ cd / #一番上の階層に移動
-  $ git clone https://github.com/rbenv/rbenv.git usr/local/src/rbenv
+
+  $ sudo git clone https://github.com/rbenv/rbenv.git usr/local/src/rbenv
    #rbenvをインストールするための記述
-  $ git clone https://github.com/rbenv/ruby-build.git usr/local/src/rbenv/plugins/ruby-build
+
+  $ sudo git clone https://github.com/rbenv/ruby-build.git usr/local/src/rbenv/plugins/ruby-build
    #ruby-buildをインストールするための記述
   ```
 
   rbenv・・・Rubyのバージョンを切り替えて使うための環境を提供してくれるツール<br>
-  ruby-build・・・rbenvのプラグインで、Rubyをインストールするために使われる。<br><br>
-  ※バージョンが古い可能性があるので、rbenv、ruby-buildのディレクトリで下記コマンドを実行して更新<br>
-  `git pull origin master`<br>
+  ruby-build・・・rbenvのプラグインで、Rubyをインストールするために使われる。<br>
 
 ## 2. rbenvを使用できるように環境変数の登録を行う
   etc/profile.d/の直下にrbenv.shというshellスクリプトファイルを作成する。<br>
-  下記コマンドで作成も同時に行ってくれる。
+下記コマンドで作成も同時に行ってくれる。
   ```
-  $ echo 'export RBENV_ROOT="/usr/local/src/rbenv/"' >> /etc/profile.d/rbenv.sh　
+  $ echo 'export RBENV_ROOT="/usr/local/src/rbenv/"' >> /etc/profile.d/rbenv.sh
+
   $ echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> /etc/profile.d/rbenv.sh
+
   $ echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
+
   $ cat /etc/profile.d/rbenv.sh　　#上記の内容が表示されればOK
+
   $ source /etc/profile.d/rbenv.sh　　#問題なければ再読み込み
+
   $ rbenv --version　　#バージョン確認ができればOK
-  $ su           　　#一旦rootユーザーに切り替えます
-  $ source /etc/profile.d/rbenv.sh　　#rootユーザーで使えるように反映させます
+
+  $ exit           　　#ローカルユーザーに戻る
+
+  $ source /etc/profile.d/rbenv.sh　　#ローカルユーザーでも使えるように反映させる
+
   $ rbenv --version　　#バージョンが確認ができればOK
-  $ exit             #ローカルユーザーに戻る
   ```
 
 ## 3. Rubyのインストール
-  **Rubyのインストール**
+  **Rubyのインストール**  
+  rootユーザーに切り替える
   * `rbenv install -l`<br>
   インストールできるRubyのバージョン一覧を表示
   * `rbenv install バージョン`<br>
@@ -65,7 +71,7 @@
   バージョン確認ができない場合は /usr/local/src/ まで移動して下記コマンドを実行してパーミッション変更<br>
   `sudo chmod 777 rbenv`<br>
 
-#### ※ローカルユーザーでRubyのバージョン変更したい場合
+#### ※ローカルユーザーでRubyのバージョンを変更したい場合
   /usr/local/src/rbnev/　のversionファイルのパーミッションを下記コマンドで変更<br>
   `sudo chmod 777 version`<br>
   これでバージョン変更が可能になる。<br><br>
