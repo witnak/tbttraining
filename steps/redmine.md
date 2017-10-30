@@ -275,7 +275,7 @@ PassengerFriendlyErrorPages off
 
     $ systemctl enable httpd
     Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
-```
+  ```
 
 ## 10. Apache上のPassengerでRedmineを実行するための設定
 Redmineを配置したディレクトリ以下のファイルを、Apacheを実行するユーザー・グループ(CentOSの場合はいずれも"apache")で読み書きできるよう、下記コマンドでオーナーを変更します。  
