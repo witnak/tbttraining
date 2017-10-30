@@ -19,7 +19,7 @@
 * [CentOS7にrbenvをインストールする](steps/rbenv.md)
 * [CentOS7にRedmineをインストールする](steps/redmine.md)
 * [CentOS7にMariaDBをインストールする](steps/mariadb_install.md)
-* RedmineのデータベースをPostgresqlからMariaDBへ切り替える
+* [RedmineのデータベースをPostgresqlからMariaDBへ切り替える](steps/database_change.md)
 * CentOS7にnginxをインストールしてapacheと切り替える
 * CentOS7にunicornをインストールしてRedmineと連携させる
 * CentOS7にpumaをインストールしてRedmineと連携させる
