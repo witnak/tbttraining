@@ -64,7 +64,7 @@ Redmineが使用するgemパッケージをインストールする時に必要�
 
   `$ postgresql-setup initdb`  
 
-  データベースクラスタ・・・ディスク上に初期化するデータベース格納領域  
+  データベースクラスタ・・・1つのサーバインスタンスによって管理されるデータベースの集合体  
 
 * **RedmineからPostgreSQLに接続するための設定を追加**  
 
@@ -248,21 +248,6 @@ LoadModule passenger_module /usr/local/src/rbenv/versions/2.4.2/lib/ruby/gems/2.
   PassengerRoot /usr/local/src/rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/passenger-5.1.11
   PassengerDefaultRuby /usr/local/src/rbenv/shims/ruby
 </IfModule>
-
-# Passengerが追加するHTTPヘッダを削除するための設定（任意）。
-#
-Header always unset "X-Powered-By"
-Header always unset "X-Runtime"
-
-# 必要に応じてPassengerのチューニングのための設定を追加（任意）。
-# 詳しくはPhusion Passenger users guide(https://www.phusionpassenger.com/library/config/apache/reference/)参照。
-PassengerMaxPoolSize 20
-PassengerMaxInstancesPerApp 4
-PassengerPoolIdleTime 864000
-PassengerHighPerformance on
-PassengerStatThrottleRate 10
-PassengerSpawnMethod smart
-PassengerFriendlyErrorPages off
 ```
 **※CentOSではApache起動時に /etc/httpd/conf.d/*.confが自動的に読み込まれます。**  
 
@@ -288,26 +273,32 @@ rootユーザーで下記コマンドを実行
   URLのサブディレクトリ名でURLにアクセスできるように設定する。  
   例：http://サーバーIPアドレス又はホスト名/サブディレクトリ名  
 
-* **シンボリックリンクの作成**  
+  * **シンボリックリンクの作成**  
 
-  Apacheの DoucumentRoot に指定されているディレクトリ(**デフォルトは/var/www/html**)にRedmineのpublicディレクトリ(**/var/lib/redmine/public**)のシンボリックリンクを作成する。シンボリックリンクの名前はURLのサブディレクトリ名部分で使用したい名前にする。  
-  下記コマンドでシンボリックリンクを /var/www/html/ に作成する。  
+    Apacheの DoucumentRoot に指定されているディレクトリ(**デフォルトは/var/www/html**)にRedmineのpublicディレクトリ(**/var/lib/redmine/public**)のシンボリックリンクを作成する。シンボリックリンクの名前はURLのサブディレクトリ名部分で使用したい名前にする。  
+    下記コマンドでシンボリックリンクを /var/www/html/ に作成する。  
 
-  `ln -s /var/lib/redmine/public /var/www/html/使用したい名前(例：redmine)`  
+    `ln -s /var/lib/redmine/public /var/www/html/使用したい名前(例：redmine)`  
 
-* **Apacheへの設定追加**  
+  * **Apacheへの設定追加**  
 
-  前述の手順で作成したRedmine関係のApacheの設定ファイル  
-  /etc/httpd/conf.d/redmine.conf に以下の設定を追加する。  
+    前述の手順で作成したRedmine関係のApacheの設定ファイル  
+    /etc/httpd/conf.d/redmine.conf に以下の設定を追加する。  
 
-  `RackBaseURI /redmine`  
+    ```
+    Alias /redmine /var/lib/redmine/public
+    <Location /redmine>
+     PassengerBaseURI /redmine
+     PassengerAppRoot /var/lib/redmine
+</Location>
+    ```
 
-  設定後、下記コマンドを実行してApacheを再起動してください。  
+    設定後、下記コマンドを実行してApacheを再起動してください。  
 
-  ```
-  $ service httpd configtest
+    ```
+    $ service httpd configtest
 
-  $ service httpd restart
-  ```
+    $ service httpd restart
+    ```
 
 以上でRedmineインストール作業完了です。
