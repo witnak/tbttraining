@@ -290,7 +290,7 @@ rootユーザーで下記コマンドを実行
     <Location /redmine>
      PassengerBaseURI /redmine
      PassengerAppRoot /var/lib/redmine
-</Location>
+    </Location>
     ```
 
     設定後、下記コマンドを実行してApacheを再起動してください。  
