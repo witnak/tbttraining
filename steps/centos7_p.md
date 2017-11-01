@@ -1,5 +1,4 @@
-﻿# CentOS7を仮想環境に構築する
-
+# CentOS7を仮想環境に構築する
 
 ## ①CentOS7のダウンロード
  1. 下記URLにアクセスして「DVD　ISO」をクリック。 https://www.centos.org/download/
@@ -88,7 +87,7 @@
    3. ポートフォワーディングをクリック<br>
       <img src=image/VirtualBox_IF2.JPG>
    4. <img src=image/VirtualBox_IF4.JPG>をクリックした後、ホストポート、ゲストポートに22を入力して「OK」をクリック<br>
-      <img src=image/VirtualBox_IF3.JPG><br>
+      <img src=image/VirtualBox_IF5.JPG><br>
       以上でVirtualBoxの設定は完了。
 4. **ホスト**<br>
    TeraTermの画面に戻って、ローカルマシンのIPアドレスを入力する。<br>
