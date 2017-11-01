@@ -37,7 +37,7 @@ rootユーザーで下記コマンドを実行する。
 
 * **Passengerのビルドに必要なヘッダファイルなどのインストール**  
 
-  `$ yum install curl-devel libyaml-devel libffi-devel`  
+  `$ yum -y install curl-devel libyaml-devel libffi-devel`  
 
 * **Postgreとヘッダファイルのインストール**  
 
@@ -105,9 +105,10 @@ Redmineが使用するgemパッケージをインストールする時に必要�
 * **PostgreSQLの起動および自動起動の設定**  
 
   ```
-  $ service postgresql start
+  $ service start postgresql.service
   Redirecting to /bin/systemctl start  postgresql.service
-  $ systemctl enable postgresql
+
+  $ systemctl enable postgresql.service
   Created symlink from /etc/systemd/system/multi-user.target.wants/postgresql.service to /usr/lib/systemd/system/postgresql.service.
   ```
 
