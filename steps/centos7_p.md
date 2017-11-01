@@ -57,8 +57,11 @@
 9. **準備完了**<br>
    「CentOS Linux を使い始める」をクリック
 ## ④SSHクライアント(Tera Term)インストール
-1. 画像の赤枠で囲まれた部分を、下記URLにアクセスしてクリック https://ja.osdn.net/projects/ttssh2/releases/ <br>
+1. 画像の赤枠で囲まれた部分を、下記URLにアクセスしてクリック  
+https://ja.osdn.net/projects/ttssh2/releases/ <br>
+
    <img src=image/SSH.JPG><br>
+   
    ダウンロードできたexeファイルを起動する。
 2. **インストール中に利用する言語**<br>
    日本語　のままで「OK」をクリック
@@ -76,29 +79,43 @@
 ## ⑤SSHクライアント(Tera Term)の設定
 1. デスクトップ上にショートカットアイコンが作成されているので起動させる。
 2. 以下のような画面が起動する。<br>
+
    <img src=image/SSH3.JPG><br>
+
 3. **TCPポート#(P): 22**<br>
+
    <img src=image/SSH4.JPG><br>
+
  * 上記のポート番号で仮想環境に接続するために、VirtualBoxのUI上で設定をする。<br>
    1. VirtualBoxを起動して、使用する仮想マシンを選択して[設定]をクリック<br>
+
       <img src=image/VirtualBox_IF.JPG>
+
    2. ネットワークを選択して「高度」をクリック<br>
+
       <img src=image/VirtualBox_IF1.JPG>
+
    3. ポートフォワーディングをクリック<br>
+
       <img src=image/VirtualBox_IF2.JPG>
-   4. <img src=image/VirtualBox_IF4.JPG>をクリックした後、ホストポート、ゲストポートに22を入力して「OK」をクリック<br>
-      <img src=image/VirtualBox_IF3.JPG><br>
+
+   4. <img src=image/VirtualBox_IF4.JPG> をクリックした後、名前にSSH、ホストポートに22、ゲストポートに22を入力する。  
+   ついでに、仮想環境内のHTTPサーバーに接続できるように、名前にHTTP、ホストポート8080、ゲストポートに80を入力して「OK」をクリック。  
+
+      <img src=image/VirtualBox_IF5.JPG><br>
+
       以上でVirtualBoxの設定は完了。
 4. **ホスト**<br>
    TeraTermの画面に戻って、ローカルマシンのIPアドレスを入力する。<br>
+
    <img src=image/SSH5.JPG><br>
+
    下記コマンドでIPアドレスを確認できる。<br>
+
    ```
-   $ipconfig
+    $ipconfig
 
     Windows IP 構成
-
-
     イーサネット アダプター イーサネット:
 
     接続固有の DNS サフィックス . . . . .:
