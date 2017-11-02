@@ -26,6 +26,7 @@
 
 ## VirtualBox Tips
 
+* [VirtualBoxで構築した仮想マシンの画面サイズをウィンドウ幅に合わせる](tips/virtualbox_conf.md)
 * 別のマシンからVirtualBoxで走っている仮想マシンにアクセスできるようにする
 * VirtualBox内に二つの仮想マシンを作り、それぞれDBサーバとアプリケーションサーバとする
 
