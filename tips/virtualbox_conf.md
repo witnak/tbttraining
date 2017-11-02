@@ -28,7 +28,7 @@ VirtualBoxの上部（ツールバー）にあるデバイスを選択→Guest A
 
 5. 下のような状態になるので、[Enter]を押し、ウィンドウを閉じます。
 <div align=center>
-  <img src=image/guestaddtions_installed.JPG>
+  <img src=image/guestadditions_installed.JPG>
 </div>  
 
 6. 再起動をすると画面のサイズがウィンドウ幅に合わせて変わるようになっています。
