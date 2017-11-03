@@ -4,8 +4,8 @@
 
 centos7のイメージを使って、railsdevというコンテナを作り、コマンドラインを起動する。  rails
 ```
-docker run -i -d -p 3000:3000 --name "postos3batch" -t centos:7 /sbin/init
-docker exec -i -t postos3batch bash
+docker run -i -d -p 3000:3000 --name "railsdev" -t centos:7 /sbin/init
+docker exec -i -t postos3batch bash #これ、違うかも
 ```
 
 |スイッチ|説明|
