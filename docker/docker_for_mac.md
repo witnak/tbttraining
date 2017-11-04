@@ -11,7 +11,7 @@
   特に変わったことをするわけではないので、stableでいいと思う。  
 
 * インストールができたかどうかの確認
-  `docker version`コマンドでこんな感じの出力があれば、まあOK。
+  `docker version`コマンドでこんな感じの出力があれば、まあOK。  
   ```
   $ docker version
   Client:
