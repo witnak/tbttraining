@@ -3,8 +3,8 @@ FROM centos:7
 # yum install
 RUN yum -y update
 RUN yum -y install gcc git rsync bzip2 tar openssl openssl-devel readline-devel  zlib-devel libffi-devel gdbm-devel tk tk-devel tcl tcl-devel patch gcc-c++ which sqlite-devel wget openssh-server file
-RUN yum -y install http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
-RUN yum -y install mysql mysql-devel ImageMagick
+RUN yum -y install mariadb mariadb-server mysql-devel
+RUN yum -y install ImageMagick
 RUN yum -y install subversion
 
 # rbenvのインストール
@@ -23,3 +23,8 @@ RUN rbenv global 2.4.2
 RUN rbenv rehash
 RUN rbenv exec gem install bundler
 RUN rbenv rehash
+# bundlerのインストール
+RUN gem install bundler --no-rdoc --no-ri
+
+# centosの起動
+CMD /sbin/init

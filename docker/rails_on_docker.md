@@ -43,7 +43,6 @@ $ docker exec -i -t railsdev bash
 # yum install
 yum -y update
 yum -y install gcc git rsync bzip2 tar openssl openssl-devel readline-devel  zlib-devel libffi-devel gdbm-devel tk tk-devel tcl tcl-devel patch gcc-c++ which sqlite-devel wget openssh-server file
-yum -y install postgresql-server postgresql-devel
 yum -y install ImageMagick
 yum -y install subversion
 
@@ -66,11 +65,40 @@ rbenv rehash
 # bundlerのインストール
 gem install bundler --no-rdoc --no-ri
 
-# PostgreSQLの設定
-postgresql-setup initdb
-echo "host    redmine        redmine        127.0.0.1/32        md5" >> /var/lib/pgsql/data/pg_hba.conf
-echo "host    redmine        redmine        ::1/128             md5" >> /var/lib/pgsql/data/pg_hba.conf
-systemctl start postgresql.service
-systemctl enable postgresql.service
+# mariaDBのインストール
+yum -y install mariadb mariadb-server mysql-devel
+```
 
+
+
+
+
+Dockerfileができたら、いったん途中まで作ったコンテナを破棄する。  
+```
+# 止める
+docker stop railsdev  
+# 破棄する
+docket rm railsdev
+```
+
+その上で、同じ名前`railsdev`でbuildする。
+```
+docker build -t railsdev .
+```
+
+イメージができているか確認する。
+```
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+railsdev            latest              e58395ec6f54        58 seconds ago      1.12GB
+centos              7                   d123f4e55e12        9 hours ago         197MB
+```
+
+ビルドが完了したら、同じ条件でコンテナを起動してみる。
+```
+docker run --privileged -d -p 3000:3000 --name railsdev -t railsdev
+```
+で、稼働中のコンテナにアクセスしたい場合は以下（さっきと同じ）。  
+```
+docker exec -i -t railsdev bash
 ```
