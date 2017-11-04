@@ -2,13 +2,14 @@
 
 * homebrewくらいは入れてるよね？  
   ```
-  brew install docker
-  brew cask install docker # GUIで確認する場合。
+  brew cask install docker
+  open /Applications/Docker.app
   ```
 
 * 本家はこちら。  
-  https://docs.docker.com/docker-for-mac/
-  特に変わったことをするわけではないので、stableでいいと思う。  
+  homebrewを使わないのなら本家から持ってくる。  
+  https://docs.docker.com/docker-for-mac/  
+  特に変わったことをするわけではないので、stableでいいと思う。  
 
 * インストールができたかどうかの確認
   `docker version`コマンドでこんな感じの出力があれば、まあOK。  
