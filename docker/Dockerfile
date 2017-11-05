@@ -26,5 +26,9 @@ RUN rbenv rehash
 # bundlerのインストール
 RUN gem install bundler --no-rdoc --no-ri
 
+# ディレクトリの準備
+VOLUME /var/lib/redmine
+WORKDIR /var/lib/redmine
+
 # centosの起動
 CMD /sbin/init

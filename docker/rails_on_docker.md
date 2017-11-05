@@ -4,8 +4,12 @@ Dockerを使ってRailsの開発環境を作りたい。
 
 ## Railsが動作する環境を手動で構築する手順
 
-centos7のイメージを使って、railsdevというコンテナを作り、コマンドラインを起動する。  
-目標は、redmineをdevelopmentモードで実行すること。  
+目標は、
+* redmineをdevelopmentモードで実行すること。  
+* redmineはホスト側で編集閲覧できること。
+  （redmineそのものが目的ではなく、開発環境構築の演習がしたい）
+
+まずは試しに、centos7のイメージを使って、railsdevというコンテナを作り、コマンドラインを起動する。  
 ```
 docker run --privileged -d -p 3000:3000 --name "railsdev" -t centos:7 /sbin/init
 ```
@@ -69,10 +73,16 @@ gem install bundler --no-rdoc --no-ri
 yum -y install mariadb mariadb-server mysql-devel
 ```
 
+さて、この辺でちょっと立ち止まって考える。  
+ふつう、マシン１台用意したりVirtualBoxなどのホスト型仮想環境を使う場合、ひとつのCentosマシンを用意し、railsもDBもそこに立ててしまって、すべて一つにまとめてしまう。  
+本番環境でもなければ、それで十分だからだ。  
+でもたぶん、Dockerはそういうスタイルではない。  
+Dockerはおそらく、１コンテナで１サービスが正しいはずだ。  
 
+ではどうするか。  
 
-
-
+ひとまず、上記までの作業をまとめてDockerfileを作成する。  
+Dockerfileは[こんな感じ](Dockerfile)で作った。  
 Dockerfileができたら、いったん途中まで作ったコンテナを破棄する。  
 ```
 # 止める
@@ -81,7 +91,7 @@ docker stop railsdev
 docket rm railsdev
 ```
 
-`railsdevimg`でbuildする。
+`railsdevimg`というイメージ名でbuildする。
 ```
 docker build -t railsdevimg .
 ```
@@ -104,3 +114,36 @@ docker run --privileged -d -p 3000:3000 --name railsdev -t railsdevimg
 ```
 docker exec -i -t railsdev bash
 ```
+動くのはとりあえず確認した。
+
+いったん止める。  
+```
+docker stop railsdev
+```
+止めたイメージを削除しておく。  
+```
+docker rm railsdev
+```
+
+redmineのコードを、 **ホスト** 側にダウンロードしておく。  
+```
+svn export https://svn.redmine.org/redmine/branches/3.4-stable/ ./redmine
+```
+
+取ってきたら、コンテナを起動。  
+```
+docker run --privileged -d -p 3000:3000 -v "$PWD/redmine:/var/lib/redmine" --name railsdev -t railsdevimg
+```
+さっきまでと違うのはこれがついたこと。  
+
+|スイッチ|説明|
+|---|---|
+|-v|ボリュームをホストと接続する。"ホスト側：コンテナ側"|
+
+ホスト側はフルパスじゃないとダメらしい。  
+
+これで、フォルダをあたかもファイル共有しているかの状態が出来ているはず。  
+
+## dokcer-composeを使う。
+
+複数のコンテナを一気に取り扱う仕組みが、docker-compose。  
