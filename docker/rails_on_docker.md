@@ -81,22 +81,24 @@ docker stop railsdev
 docket rm railsdev
 ```
 
-その上で、同じ名前`railsdev`でbuildする。
+`railsdevimg`でbuildする。
 ```
-docker build -t railsdev .
+docker build -t railsdevimg .
 ```
+ここでの`-t`は、runの時と同じで、イメージ名を指定する。  
+最後の`.`は、Dockerfileがあるディレクトリを示す。  
 
 イメージができているか確認する。
 ```
 $ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-railsdev            latest              e58395ec6f54        58 seconds ago      1.12GB
-centos              7                   d123f4e55e12        9 hours ago         197MB
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+railsdevimg         latest              b7344342b028        About a minute ago   1.12GB
+centos              7                   d123f4e55e12        30 hours ago         197MB
 ```
 
 ビルドが完了したら、同じ条件でコンテナを起動してみる。
 ```
-docker run --privileged -d -p 3000:3000 --name railsdev -t railsdev
+docker run --privileged -d -p 3000:3000 --name railsdev -t railsdevimg
 ```
 で、稼働中のコンテナにアクセスしたい場合は以下（さっきと同じ）。  
 ```
