@@ -142,8 +142,47 @@ docker run --privileged -d -p 3000:3000 -v "$PWD/redmine:/var/lib/redmine" --nam
 
 ホスト側はフルパスじゃないとダメらしい。  
 
-これで、フォルダをあたかもファイル共有しているかの状態が出来ているはず。  
+これで、`-v`で指定したフォルダが、あたかもファイル共有されているかの状態が出来ているはず。  
+
+次の試みのため、今動いているコンテナは止めて削除しておく。  
+```
+docker stop railsdev
+docker rmn railsdev
+```
 
 ## dokcer-composeを使う。
 
 複数のコンテナを一気に取り扱う仕組みが、docker-compose。  
+DB側はたいしてやることはないはずなので、出来合いのものをほぼそのまま使おうと思う。
+
+```
+docker-compose up -d
+```
+`-d`を入れているので、バックグランドで動いている。  
+
+```
+docker exec -i -t railsdev bash
+```
+
+```
+bundle exec rake generate_secret_token
+RAILS_ENV=development bundle exec rake db:migrate
+RAILS_ENV=development REDMINE_LANG=ja bundle exec rake redmine:load_default_data
+budle exec rails s
+```
+
+これでlocalhostないしは仮想マシンのipで3000ポートにアクセスするとredmineが動いているはず。
+
+
+
+
+
+
+
+
+## １日の仕事が終わって終了する場合。
+
+```
+docker-composse stop
+docker-machine stop
+```

@@ -4,7 +4,7 @@ FROM centos:7
 RUN yum -y update
 RUN yum -y install gcc git rsync bzip2 tar openssl openssl-devel readline-devel  zlib-devel libffi-devel gdbm-devel tk tk-devel tcl tcl-devel patch gcc-c++ which sqlite-devel wget openssh-server file
 RUN yum -y install mariadb mariadb-server mysql-devel
-RUN yum -y install ImageMagick
+RUN yum -y install ImageMagick ImageMagick-devel ipa-pgothic-fonts
 RUN yum -y install subversion
 
 # rbenvのインストール
