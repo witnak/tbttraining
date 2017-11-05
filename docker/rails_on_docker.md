@@ -183,6 +183,6 @@ budle exec rails s
 ## １日の仕事が終わって終了する場合。
 
 ```
-docker-composse stop
+docker-composse down
 docker-machine stop
 ```
