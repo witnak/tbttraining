@@ -1,21 +1,26 @@
-db:
-  image: mariadb:10.1.16
-  ports:
-    - "3306:3306"
-  volumes:
-    - "$PWD/mariadb:/var/lib/mysql"
-  environment:
-    - MYSQL_ROOT_PASSWORD=root
-    - MYSQL_DATABASE=redmine
-app:
-  build: .
-  container_name: "railsdev"
-  environment:
-    RAILS_ENV: development
-  ports:
-    - "3000:3000"
-  volumes:
-    - "$PWD/redmine:/var/lib/redmine"
-    - "$PWD/database.yml:/var/lib/redmine/config/database.yml"
-  links:
-    - "db"
+version: "3.3"
+services:
+  db:
+    image: mariadb:10.1.16
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=redmine
+  app:
+    build: .
+    container_name: "railsdev"
+    environment:
+      RAILS_ENV: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - redmine:/var/lib/redmine
+      - "$PWD/database.yml:/var/lib/redmine/config/database.yml"
+    depends_on:
+      - db
+volumes:
+  mariadb: "$PWD/mariadb"
+  redmine: "$PWD/redmine"
