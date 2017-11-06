@@ -182,7 +182,7 @@ mysql -u root -p -h db
 webrick起動するときは以下のようにする。
 （`-b`つけないと、host側からのアクセスに答えてくれない）  
 ```
-bundle exec rails s -p 3000 -b '0.0.0.0'
+bundle exec rails s -b '0.0.0.0'
 ```
 
 これでlocalhostないしは仮想マシンのipで3000ポートにアクセスするとredmineが動いているはず。
