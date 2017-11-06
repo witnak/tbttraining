@@ -10,6 +10,7 @@ Windows10 home またはWindows8以下ではHyper-Vが動かないので、[Dock
   VirtualBoxが入っていなければそれも入れておく。  
   ```
   choco install docker-toolbox -y
+  choco install docker-kitematic -y
   ```
 * ではありますが、本家からとってくる場合は以下からどうぞ。
   https://www.docker.com/products/docker-toolbox
