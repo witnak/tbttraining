@@ -174,6 +174,11 @@ bundle exec rake db:migrate
 REDMINE_LANG=ja bundle exec rake redmine:load_default_data
 ```
 
+テーブル内容をちゃんと作成できたかは、mariadb(mysql)にログインして確認してみる。  
+```
+mysql -u root -p -h db
+```
+
 webrick起動するときは以下のようにする。
 （`-b`つけないと、host側からのアクセスに答えてくれない）  
 ```
