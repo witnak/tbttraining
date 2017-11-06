@@ -195,6 +195,6 @@ dcoker-machine ip default
 ## １日の仕事が終わって終了する場合。
 
 ```
-docker-composse down
+docker-compose down
 docker-machine stop
 ```
