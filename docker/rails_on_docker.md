@@ -46,6 +46,7 @@ bundle exec rails s -b '0.0.0.0'
 または、Windowsなら以下のコマンドで`dokcer-machine`でIPを確認して、ブラウザを開く。  
 ```
 $ docker-machine ip default
+192.168.99.100
 ```
 ならば、http://192.168.99.101:3000/ となる。
 
