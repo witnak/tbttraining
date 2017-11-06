@@ -2,7 +2,54 @@
 
 Dockerを使ってRailsの開発環境を作りたい。  
 
-## Railsが動作する環境を手動で構築する手順
+## Too long; Didn’t read
+
+redmineを題材にして、Railsの開発環境をDcokerで構築する。  
+お急ぎの方はこちらから。  
+
+まず、Dockerをインストールする。  
+* [Windows10 Pro 以上でのDockerインストール](docker_for_windows.md)
+* [Windows10 home または Windows8 以下でのDockerインストール](docker_toolbox_for_win.md)
+* [MacでのDockerインストール](docker_for_mac.md)
+
+このリポジトリにある、[docker-compose.yml](docker-compose.yml)と[Dockerfile](Dcokerfile)と[database.yml](database.yml)をひとつのフォルダにおく。  
+そして、同じフォルダに、redmineをチェックアウトする。  
+```
+svn co https://svn.redmine.org/redmine/branches/3.4-stable/ ./redmine
+```
+
+ここでコンテナ起動。  
+```
+dcoker-compose up
+```
+
+Railsサーバにログイン（ほんとはちょっと違うけど）して、
+```
+docker exec -i -t railsdev bash
+```
+
+Redmineをセットアップ。
+```
+bundle install --without development test --path vendor/bundle
+bundle exec rake generate_secret_token
+bundle exec rake db:migrate
+REDMINE_LANG=ja bundle exec rake redmine:load_default_data
+```
+
+Redmineサーバを起動する。  
+（`-b`つけないと、host側からのアクセスに答えてくれない）  
+```
+bundle exec rails s -b '0.0.0.0'
+```
+
+これで、LinuxまたはMacならブラウザで http://localhost:3000/ を開く。
+または、Windowsなら以下のコマンドで`dokcer-machine`でIPを確認して、ブラウザを開く。  
+```
+$ docker-machine ip default
+```
+ならば、http://192.168.99.101:3000/ となる。
+
+## Railsが動作する環境を手動で構築した時の試行錯誤
 
 目標は、
 * redmineをdevelopmentモードで実行すること。  
@@ -127,7 +174,7 @@ docker rm railsdev
 
 redmineのコードを、 **ホスト** 側にダウンロードしておく。  
 ```
-svn export https://svn.redmine.org/redmine/branches/3.4-stable/ ./redmine
+svn co https://svn.redmine.org/redmine/branches/3.4-stable/ ./redmine
 ```
 
 取ってきたら、コンテナを起動。  
@@ -155,6 +202,16 @@ docker rmn railsdev
 複数のコンテナを一気に取り扱う仕組みが、docker-compose。  
 DB側はたいしてやることはないはずなので、出来合いのものをほぼそのまま使おうと思う。
 ひとまず[docker-compose.yml](docker-compose.yml)をこんな感じで作ってみた。  
+
+この[docker-compose.yml](docker-compose.yml)のポイントは、`named volume`を作っているところ。  
+```
+#永続化のためのボリュームを作成
+volumes:
+  mariadb:
+  vendor:
+```
+
+LinuxやMacの場合は、`valumes`タグに直接ホスト側のディレクトリを指定すると上手く繋げてくれるが、Windowsの場合は、ウログラムが直接触るようなディレクトリは`named volume`を作ってやらないと上手くいかない。  
 
 [docker-compose.yml](docker-compose.yml)と同じフォルダで、以下を実行。  
 ```
