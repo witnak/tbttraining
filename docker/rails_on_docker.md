@@ -168,9 +168,9 @@ Redmineをインストールする。
 ```
 bundle install --without development test --path vendor/bundle
 bundle exec rake generate_secret_token
-RAILS_ENV=development bundle exec rake db:migrate
-RAILS_ENV=development REDMINE_LANG=ja bundle exec rake redmine:load_default_data
-budle exec rails s
+bundle exec rake db:migrate
+REDMINE_LANG=ja bundle exec rake redmine:load_default_data
+bundle exec rails s
 ```
 
 これでlocalhostないしは仮想マシンのipで3000ポートにアクセスするとredmineが動いているはず。
