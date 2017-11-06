@@ -164,7 +164,9 @@ docker-compose up -d
 docker exec -i -t railsdev bash
 ```
 
+Redmineをインストールする。
 ```
+bundle install --without development test --path vendor/bundle
 bundle exec rake generate_secret_token
 RAILS_ENV=development bundle exec rake db:migrate
 RAILS_ENV=development REDMINE_LANG=ja bundle exec rake redmine:load_default_data
