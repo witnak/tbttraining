@@ -1,4 +1,7 @@
 version: "3.3"
+volumes:
+  mariadb:
+  vendor:
 services:
   db:
     image: mariadb:10.1.16
@@ -17,10 +20,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - redmine:/var/lib/redmine
+      - "$PWD/redmine:/var/lib/redmine"
       - "$PWD/database.yml:/var/lib/redmine/config/database.yml"
+      - vendor:/var/lib/redmine/vendor
     depends_on:
       - db
-volumes:
-  mariadb: "$PWD/mariadb"
-  redmine: "$PWD/redmine"
