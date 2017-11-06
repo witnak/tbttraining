@@ -154,7 +154,9 @@ docker rmn railsdev
 
 複数のコンテナを一気に取り扱う仕組みが、docker-compose。  
 DB側はたいしてやることはないはずなので、出来合いのものをほぼそのまま使おうと思う。
+ひとまず[docker-compose.yml](docker-compose.yml)をこんな感じで作ってみた。  
 
+[docker-compose.yml](docker-compose.yml)と同じフォルダで、以下を実行。  
 ```
 docker-compose up -d
 ```
@@ -170,16 +172,19 @@ bundle install --without development test --path vendor/bundle
 bundle exec rake generate_secret_token
 bundle exec rake db:migrate
 REDMINE_LANG=ja bundle exec rake redmine:load_default_data
-bundle exec rails s
+```
+
+webrick起動するときは以下のようにする。
+（`-b`つけないと、host側からのアクセスに答えてくれない）  
+```
+bundle exec rails s -p 3000 -b '0.0.0.0'
 ```
 
 これでlocalhostないしは仮想マシンのipで3000ポートにアクセスするとredmineが動いているはず。
-
-
-
-
-
-
+仮想マシンのIPを確認するには、以下。
+```
+dcoker-machine ip default
+```
 
 
 ## １日の仕事が終わって終了する場合。
