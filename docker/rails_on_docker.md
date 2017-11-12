@@ -212,7 +212,7 @@ volumes:
   vendor:
 ```
 
-LinuxやMacの場合は、`valumes`タグに直接ホスト側のディレクトリを指定すると上手く繋げてくれるが、Windowsの場合は、ウログラムが直接触るようなディレクトリは`named volume`を作ってやらないと上手くいかない。  
+LinuxやMacの場合は、`valumes`タグに直接ホスト側のディレクトリを指定すると上手く繋げてくれるが、Windowsの場合は、アプリケーションが直接触るようなディレクトリは`named volume`を作ってやらないと上手くいかない。  
 
 [docker-compose.yml](docker-compose.yml)と同じフォルダで、以下を実行。  
 ```
@@ -252,6 +252,7 @@ dcoker-machine ip default
 
 ## １日の仕事が終わって終了する場合。
 
+Windowsの場合は、docker-machineを止めてやらないと、シャットダウンができない。  
 ```
 docker-compose down
 docker-machine stop
