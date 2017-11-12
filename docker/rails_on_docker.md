@@ -168,7 +168,7 @@ docker exec -i -t railsdev bash
 ```
 docker stop railsdev
 ```
-止めたイメージを削除しておく。  
+止めたコンテナを削除しておく。あとで作り直したいから。  
 ```
 docker rm railsdev
 ```
@@ -178,7 +178,7 @@ redmineのコードを、 **ホスト** 側にダウンロードしておく。
 svn co https://svn.redmine.org/redmine/branches/3.4-stable/ ./redmine
 ```
 
-取ってきたら、コンテナを起動。  
+redmineを取ってきたら、コンテナを起動。  
 ```
 docker run --privileged -d -p 3000:3000 -v "$PWD/redmine:/var/lib/redmine" --name railsdev -t railsdevimg
 ```
