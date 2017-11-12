@@ -12,7 +12,7 @@ redmineを題材にして、Railsの開発環境をDcokerで構築する。
 * [Windows10 home または Windows8 以下でのDockerインストール](docker_toolbox_for_win.md)
 * [MacでのDockerインストール](docker_for_mac.md)
 
-このリポジトリにある、[docker-compose.yml](docker-compose.yml)と[dockerfile](dcokerfile)と[database.yml](database.yml)をひとつのフォルダにおく。  
+このリポジトリにある、[docker-compose.yml](docker-compose.yml)と[Dockerfile](Dockerfile)と[database.yml](database.yml)をひとつのフォルダにおく。  
 そして、同じフォルダに、redmineをチェックアウトする。  
 ```
 svn co https://svn.redmine.org/redmine/branches/3.4-stable/ ./redmine
