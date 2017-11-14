@@ -254,6 +254,6 @@ dcoker-machine ip default
 
 Windowsの場合は、docker-machineを止めてやらないと、シャットダウンができない。  
 ```
-docker-compose down
+docker-compose stop
 docker-machine stop
 ```
