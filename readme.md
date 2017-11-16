@@ -37,3 +37,4 @@
 * [MacでのDockerインストール](docker/docker_for_mac.md)
 
 * [DockerによるRails動作環境を作る](docker/rails_on_docker.md)
+* [トラブルシューティング](docker/trouble_shooting.md)
